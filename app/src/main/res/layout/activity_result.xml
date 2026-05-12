@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F1115"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvPageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan Result"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- RISK ASSESSMENT CARD -->
+        <LinearLayout
+            android:id="@+id/cardRisk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#1B1F27"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Risk Assessment"
+                android:textColor="#B0B7C3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvRiskLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="CHECKING..."
+                android:textColor="#FFD54F"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvRiskScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Score: 0/100"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/progressRisk"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="10dp"
+                android:max="100"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/tvScoreGuide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#222A35"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="10dp"
+                android:text="ⓘ Score guide: tap to view risk bands"
+                android:textColor="#DDE7F3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvConfidence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Confidence: Calculating..."
+                android:textColor="#B0B7C3"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- SCAN INFORMATION CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#1B1F27"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scan Information"
+                android:textColor="#B0B7C3"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="URL"
+                    android:textColor="#B0B7C3"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvScannedUrl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No content received"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="Scan"
+                    android:textColor="#B0B7C3"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvScanInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="New scan"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="Validation"
+                    android:textColor="#B0B7C3"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvValidation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Validation result"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="Metadata"
+                    android:textColor="#B0B7C3"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvUrlMetadata"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Waiting for urlscan.io metadata..."
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- REASON CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#1B1F27"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reason for Risk"
+                android:textColor="#B0B7C3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvRiskReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Reason will appear here"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- REDIRECTION CHAIN CARD -->
+        <LinearLayout
+            android:id="@+id/cardRedirectChain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#1B1F27"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Redirection Chain"
+                android:textColor="#B0B7C3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvRedirectChain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Checking redirects..."
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <!-- RULE FINDINGS CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#1B1F27"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detected URL Characteristics"
+                android:textColor="#B0B7C3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvCharacteristics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="No analysis yet"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- THREAT INTELLIGENCE CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#1B1F27"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Threat Intelligence"
+                android:textColor="#B0B7C3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="VirusTotal"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvVirusTotalStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Checking..."
+                android:textColor="#FFC107"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvVirusTotalDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Waiting for VirusTotal result..."
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:background="#2A2F3A" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Google Safe Browsing"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSafeBrowsingStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Checking..."
+                android:textColor="#FFC107"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSafeBrowsingDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Waiting for Safe Browsing result..."
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:background="#2A2F3A" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="urlscan.io"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvUrlScanStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Checking..."
+                android:textColor="#FFC107"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvUrlScanDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Waiting for urlscan.io result..."
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <!-- SCREENSHOT PREVIEW -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Website Screenshot Preview"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivUrlScanScreenshot"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginTop="10dp"
+                android:background="#0F1115"
+                android:contentDescription="urlscan.io screenshot preview"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/tvScreenshotHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Preparing screenshot preview..."
+                android:textColor="#B0B7C3"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnOpenLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Open Link"
+            android:textAllCaps="false"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/btnSharePdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Share PDF Report"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</ScrollView>

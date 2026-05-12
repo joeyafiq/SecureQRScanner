@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F1115"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvLoginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Secure QR Scanner"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLoginSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Login to access your QR security scanning tool."
+            android:textColor="#B0B7C3"
+            android:textSize="15sp" />
+
+        <!-- LOGIN CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="#1B1F27"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etLoginUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#0F1115"
+                android:hint="Username"
+                android:inputType="text"
+                android:padding="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#8A93A3"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etLoginPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="#0F1115"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#8A93A3"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Login"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnSetupAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Setup Account"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvLoginNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Note: This is a local prototype login. Your API keys are loaded from local device storage after successful login."
+            android:textColor="#8A93A3"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</ScrollView>

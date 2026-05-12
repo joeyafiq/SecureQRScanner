@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F1115"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- TOP BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvHistoryTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Scan History"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnClearHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="6dp"
+            android:text="Clear"
+            android:textColor="#FF6B6B"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- SEARCH BAR -->
+    <EditText
+        android:id="@+id/etSearchHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:background="#1B1F27"
+        android:hint="Search URL..."
+        android:inputType="text"
+        android:padding="14dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#8A93A3"
+        android:textSize="15sp" />
+
+    <!-- FILTER BUTTONS -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/filterAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#6C4AB6"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="All"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/filterSafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="#1B1F27"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="Safe"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/filterSuspicious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="#1B1F27"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="Suspicious"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/filterMalicious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="#1B1F27"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="Malicious"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/filterUnknown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="#1B1F27"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="Unknown"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tvEmptyHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="No scan history found."
+        android:textColor="#B0B7C3"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/historyContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+</LinearLayout>

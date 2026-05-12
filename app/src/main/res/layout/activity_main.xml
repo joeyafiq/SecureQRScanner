@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- FULL CAMERA PREVIEW -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:scaleType="fillCenter" />
+
+    <!-- DARK OVERLAY CONTENT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="24dp">
+
+        <!-- TOP BAR -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvMainTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Secure QR Scanner"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="4dp"
+                android:text="Logout"
+                android:textColor="#FF6B6B"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- SPACE ABOVE SCAN FRAME -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="70dp" />
+
+        <!-- SCAN FRAME AREA -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="20dp">
+
+            <!-- TOP LEFT CORNER -->
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="top|start"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="6dp"
+                    android:background="#FFFFFF" />
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="54dp"
+                    android:background="#FFFFFF" />
+            </LinearLayout>
+
+            <!-- TOP RIGHT CORNER -->
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="top|end"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="6dp"
+                    android:background="#FFFFFF" />
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="54dp"
+                    android:background="#FFFFFF" />
+            </LinearLayout>
+
+            <!-- BOTTOM LEFT CORNER -->
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom|start"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="54dp"
+                    android:background="#FFFFFF" />
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="6dp"
+                    android:background="#FFFFFF" />
+            </LinearLayout>
+
+            <!-- BOTTOM RIGHT CORNER -->
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom|end"
+                android:gravity="bottom|end"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="end"
+                    android:background="#FFFFFF" />
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="6dp"
+                    android:background="#FFFFFF" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!-- BOTTOM BUTTONS -->
+        <Button
+            android:id="@+id/btnPickGallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000000"
+            android:text="Scan from Gallery"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#1E1E1E"
+            android:text="Scan History"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F1115"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvSetupTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Setup Account"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSetupSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Create a local account and enter your API keys to use the scanner."
+            android:textColor="#B0B7C3"
+            android:textSize="15sp" />
+
+        <!-- ACCOUNT CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#1B1F27"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Details"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etSetupUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="#0F1115"
+                android:hint="Username"
+                android:inputType="text"
+                android:padding="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#8A93A3"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etSetupPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="#0F1115"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#8A93A3"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etSetupConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="#0F1115"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#8A93A3"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- API KEY CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#1B1F27"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Threat Intelligence API Keys"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="These keys are saved locally on this device for prototype use."
+                android:textColor="#B0B7C3"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etVirusTotalApiKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="#0F1115"
+                android:hint="VirusTotal API Key"
+                android:inputType="text"
+                android:padding="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#8A93A3"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etSafeBrowsingApiKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="#0F1115"
+                android:hint="Google Safe Browsing API Key"
+                android:inputType="text"
+                android:padding="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#8A93A3"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etUrlScanApiKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="#0F1115"
+                android:hint="urlscan.io API Key"
+                android:inputType="text"
+                android:padding="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#8A93A3"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSaveAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="Save Account"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnGoToLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Already have an account? Login"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</ScrollView>
